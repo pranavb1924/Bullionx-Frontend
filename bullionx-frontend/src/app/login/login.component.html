@@ -1,0 +1,49 @@
+<!-- src/app/login/login.component.html -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="split-container">
+    <!-- Left panel for candlestick chart (if you want to reuse it) -->
+    <div class="candlestick-panel">
+      <canvas id="stockCanvas"></canvas>
+    </div>
+  
+    <!-- Right panel for login form -->
+    <div class="form-panel">
+      <div class="login-container">
+        <h2>GREEN SCREENER</h2>
+        <p>INVEST IN SUSTAINABLE, ETHICAL STOCKS WITH GREEN SCREENER.</p>
+  
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <!-- Email Field -->
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="EMAIL ADDRESS"
+              [(ngModel)]="user.email"
+              required
+            />
+          </div>
+  
+          <!-- Password Field -->
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="PASSWORD"
+              [(ngModel)]="user.password"
+              required
+              minlength="6"
+            />
+          </div>
+  
+          <button type="submit" class="login-btn">Log In</button>
+        </form>
+  
+        <p class="signup-link">
+          Don't have an account? <a routerLink="/signup">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  

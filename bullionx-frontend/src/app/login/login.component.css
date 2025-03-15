@@ -1,0 +1,143 @@
+/* Same base styling as sign up */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    color: #ffffff;
+    height: 100%;
+  }
+  * {
+    font-family: 'Poppins';
+  }
+  
+  /* Split container layout */
+  .split-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Left panel for candlestick chart */
+  .candlestick-panel {
+    position: relative;
+    flex: 1;
+    background-color: #121212;
+  }
+  
+  #stockCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Right panel for the login form */
+  .form-panel {
+    flex: 1;
+    background-color: #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container for login form */
+  .login-container {
+    max-width: 400px;
+    width: 90%;
+    background-color: rgba(27, 27, 27, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Heading and paragraph styling */
+  .login-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1ec776;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .login-container p {
+    color: #cccccc;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form groups */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  /* Input fields styling */
+  .form-group input {
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    background-color: #2c2c2c;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group input::placeholder {
+    color: #aaaaaa;
+  }
+  
+  /* Login button (renamed class) */
+  .login-btn {
+    padding: 14px;
+    background-color: #1ec776;
+    color: #121212;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #17a562;
+  }
+  
+  /* Signup link styling */
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    color: #1ec776;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .split-container {
+      flex-direction: column;
+      height: auto;
+    }
+    .candlestick-panel,
+    .form-panel {
+      flex: none;
+      width: 100%;
+      height: 50vh;
+    }
+  }
+  
